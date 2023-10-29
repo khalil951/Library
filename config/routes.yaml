@@ -1,3 +1,34 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+
+
+app_book:
+    path: /
+    controller: 'App\Controller\BookController::index'
+    methods: [GET]
+
+new_book:
+    path: /new_book
+    controller: 'App\Controller\BookController::new'
+    methods: [GET, POST]
+
+edit_book:
+    path: /{ref}/edit
+    controller: 'App\Controller\BookController::edit'
+    methods: [GET, POST]
+
+delete_nobooksauthors:
+    path: /deleteNoBooksAuthors
+    controller: 'App\Controller\BookController::deleteNoBooksAuthors'
+    methods: [GET, POST]
+
+delete_book:
+    path: /delete/{ref}
+    controller: 'App\Controller\BookController::delete'
+    methods: [GET]
+
+show_book:
+    path: /{ref}
+    controller: 'App\Controller\BookController::show'
+    methods: [GET]
+
+
